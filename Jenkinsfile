@@ -9,7 +9,7 @@ pipeline{
         stage('Build') {
             steps {
                 sh 'echo "This is Build Stage executing artifacts.sh"'
-                sh 'bash script2.sh "${params.NAME}" "${params.LASTNAME}" "${params.SHOW}"'
+                sh "bash script2.sh ${params.NAME} ${params.LASTNAME} ${params.SHOW}"
             }
         }
         stage('Test') {
